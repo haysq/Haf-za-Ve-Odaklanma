@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Metin Tamamla</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="startScreen">
+        <h1>Metin Tamamla</h1>
+        <div id="totalScore">Toplam Puan: <span id="totalScoreValue">0</span></div>
+        <div id="highScore">En Yüksek Tek Oyun Puanı: <span id="highScoreValue">0</span></div>
+        <div id="completedTwisters">Tamamlanan Tekerlemeler: <span id="completedTwistersValue">0</span></div>
+        <div id="modeSelection">
+            <label><input type="radio" name="mode" value="custom" checked> Kendi Metnini Yaz</label><br>
+            <label><input type="radio" name="mode" value="tongueTwister"> Tekerleme Seç</label>
+        </div>
+        <div id="customMode">
+            <textarea id="inputText" placeholder="Metnini buraya yaz..." rows="4" cols="30"></textarea>
+        </div>
+        <div id="tongueTwisterMode" style="display: none;">
+            <select id="tongueTwisterSelect">
+                <option value="">Bir tekerleme seçin...</option>
+                <option value="zırtpırt">Zırt pırt zırt pırt.</option>
+                <option value="tıkır">Tıkır tıkır tıkır.</option>
+                <option value="çıtçıt">Çıt çıt çıt çıt çıt.</option> 
+                <option value="gagavuz">Gagavuz kuşunun gagası gerdandan sarkar, ger ger gerilen gergefin gültası Galata’dan galat gergedana gül atar.</option>
+                <option value="karakız">Kara kızın kısa kayışını kasışına kızmayışına şaşmamışsın da, kuru kazın kızıp kayısı kazışına şaşmış kalmışsın.</option>
+                <option value="kapı">Kapıyı kıcır gattırıcılardan mısın, ocağı kıvılcımlattırıcılardan mısın? Ne kapıyı kıcırdattırıcılardanım ne ocağı kıvılcımlattırıcılardanım.</option>
+                <option value="bedri">Be birader buraya bak, başı bereli burma bıyıklı bastı bacak bayan berberiyle bizim Bedri bey birlikte bir pirinci birinci buluşta birbirine dizip Bursa pazarına indi.</option>
+                <option value="ülkü">Uykucu Ülkü, ucu tüllü üç örtüyü ütüyle ütüleyip de mi üstüne örtünmeli, üç örtünün ucunu tülleyip ütüleyip de mi üstüne örtünmeli?</option>
+                <option value="safinaz">Safranbolulu Safinazla Salihlili Salih, Soğukoluk’ta soğuklamışlar, sinüzit olmuşlar, sonra sımsıkı sarınarak söylene söylene Seyitgazi’ye varıp sarmısaklı su teresini susarmısağıyla karıştırarak suyunu süzmüşler.</option>
+                <option value="sazende">Sazende Şazi ile zifos Zihni, zaman zaman sizin sokağın sağ köşesinde sinsi sinsi fiskoslaşarak, zibidi Suzi’ye sonsuz ve sorumsuz bir hayasızlıkla ikide bir sizi şikâyet ederler.</option>
+                <option value="sedat">Sedat Tınaz’ın bütün tasası, suratsız teyzesine rastlamadan önce, set üstünde sırtını zerzevat sepetinin pis tepesine sürten sıska tazısını toz duman ortasında tutmasıydı.</option>
+                <option value="soson">Soson’un susuz sazlıklarında, sadece soğanla sarmısak yetişebileceğini söyleyen Samsun’lu sebzecilerin sözüne sizler de sessizce ve sezgilerinize sığınarak inanabilirsiniz.</option>
+                <option value="şavşat">Şavşat’lı Şabanla, Şarkışlalı şipşakçı Şekip ve Şıpsevdi Şehime; Şişhane’den, şeytankuşu mu, şömine maşası mı, masa şemsiyesi mi, şoson mu, şezlong mu ne, bir şeyler almaya gitmişler.</option>
+                <option value="taahir">Tarihli ve talihli tentürdiyotçu tetik Tahir’le, tahterevallici tekinsiz Tevfik’in, Talimhane’de ters türs konuşarak, ter ter tepinip tir tir titremeleri, Turhallı tombul Turgut’u, Tosbağa sokaktaki tömbekiciye doğru tıpış tıpış yürüttü.</option>
+                <option value="vırvırcı">Vırvırcı Vedia ile vıdı vıdıcı Veli, velînimeti vatman Vahit’e vilâyette veda edip Vefa’ya doğru velespitle, vaveylâsız volta vururlarken, voleybolcu Volkan, virtüoz Vicdanî ve Viranşehirli vatansever viyolonselist Vecibe ile karşılaştılar.</option>
+                <option value="sizin">Sizin dala konmuş, hallu, bellu, gabellu, kabak baş bel baykusu, bizim dala konmuş, hallu, bellu, gabellu, kabak baş bel baykusuna, “Sen nasıl bir hallu, bellu, gabellu, kabak baş bel baykususun”, demiş. Bizim dala konmuş, hallu, bellu, gabellu, kabak baş bel baykusu da, sizin dala konmuş, hallu, bellu, gabellu, kabak baş bel baykusuna.</option>
+                <option value="pirinç">Bir pirinci birinci buluşta bir inci gibi birbirine bağlayıp, Perlepe berberi bastıbacak Bedri ile beraber Balıkesir pazarına parasız giden bu paytak budala, babası topal Badi’denden biberli bir papara yedi.</option>
+                <option value="kınıklı">Kınıklı kılıbık kırpıntı Kıyasettin, Kırımlı kılkuyruk kıtmiri kıkır kıkır kıkırdatarak küskütük küçümen küfeci külhaniyle külüstür Kürşat’ı külünklü küngür üstüne küttedek devirdi.</option>
+                <option value="bedri2">Be birader buraya bak, başı bereli burma bıyıklı bastı bacak bayan berberiyle bizim Bedri bey birlikte bir pirinci birinci buluşta birbirine dizip Bursa pazarına indi.</option>
+                <option value="ülkü2">Uykucu Ülkü, ucu tüllü üç örtüyü ütüyle ütüleyip de mi üstüne örtünmeli, üç örtünün ucunu tülleyip ütüleyip de mi üstüne örtünmeli?</option>
+                <option value="küp">Götür küpü, dök küpü. Getir küpü dök küpü.</option>
+                <option value="gül">Gül dibi, bülbül dili gibi.</option>
+                <option value="çarşı">Çarşıda koza ucuz, çarşıda darı ucuz, çarşıda boza da ucuz mu?</option>
+                <option value="falcı">Falcı, falcının falına, fasa fiso dedi.</option>
+                <option value="su">Sudan çıktı iki su şadısı, biri erkek şu şadısı, diğeri dişi şu şadısı.</option>
+                <option value="keşkek">Keşkekçinin keşkeklenmiş keşkek kepçesi.</option>
+                <option value="banka">Bu bankaya eski veznedar gelecek, bu bankaya eski vezne dar gelecek.</option>
+                <option value="ev">Bu evi yıkıp yapsak da mı otursak, yoksa yıkmasak onarsak da mı otursak?</option>
+                <option value="dal">Dal sarkar kartal kalkar, kartal kalkar dal sarkar.</option>
+                <option value="tunç">Üç tunç tas kayısı hoşafı.</option>
+                <option value="elalem">El alem ala dana aldı aladanalandı da biz bir ala dana alıp aladanalanamadık.</option>
+                <option value="tombul">Bir iki tombul tekir, camdan bakar, başına takar, hop hop, altın top, Mustafa, Mıstık, arabaya kıstık, üç mum yaktık, seyrine baktık.</option>
+            </select>
+        </div>
+        <button id="startButton">Oyunu Başlat</button>
+    </div>
+    <canvas id="gameCanvas" style="display: none;"></canvas>
+    <div id="score">Toplanan Harfler: 0 / <span id="totalLetters"></span></div>
+    <div id="targetText" style="display: none;"></div>
+    <div id="gameOverScreen" style="display: none;">
+        <div class="game-over-content">
+            <h2>Oyun Bitti!</h2>
+            <p>Puan: <span id="finalScore"></span></p>
+            <button id="retryButton">Tekrar Oyna</button>
+            <button id="menuButton">Ana Menü</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
